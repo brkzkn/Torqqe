@@ -70,7 +70,18 @@ namespace Torqqe.Functions.Business
 
                 foreach (var customer in customers.Where(x => x.Phones.Count > 0))
                 {
-                    phones.AddRange(customer.Phones);
+                    foreach (var phone in customer.Phones)
+                    {
+                        var existingId = existingPhones.FirstOrDefault(x => x.CustomerShopmonkeyId == customer.ShopmonkeyId
+                                                                         && x.Phones == phone.Phones)?.Id;
+
+                        phones.Add(new Phone()
+                        {
+                            Phones = phone.Phones,
+                            CustomerShopmonkeyId = customer.ShopmonkeyId,
+                            Id = existingId ?? 0
+                        });
+                    }
                 }
 
                 offset += result.Count;

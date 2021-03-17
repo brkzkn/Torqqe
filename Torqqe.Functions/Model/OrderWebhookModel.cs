@@ -21,13 +21,13 @@ namespace Torqqe.Functions.Model
         public double TotalCost;
 
         [JsonProperty("paidCost")]
-        public int PaidCost;
+        public double PaidCost;
 
         [JsonProperty("remainingCost")]
         public double RemainingCost;
 
         [JsonProperty("requestedDeposit")]
-        public int RequestedDeposit;
+        public double RequestedDeposit;
 
         [JsonProperty("isArchived")]
         public bool IsArchived;
@@ -81,7 +81,7 @@ namespace Torqqe.Functions.Model
         public bool IsDemo;
 
         [JsonProperty("totalsFormulaVersion")]
-        public int TotalsFormulaVersion;
+        public double TotalsFormulaVersion;
 
         [JsonProperty("isInvoice")]
         public bool IsInvoice;
@@ -90,13 +90,13 @@ namespace Torqqe.Functions.Model
         public string PoNumber;
 
         [JsonProperty("partCommission")]
-        public int PartCommission;
+        public double PartCommission;
 
         [JsonProperty("tireCommission")]
-        public int TireCommission;
+        public double TireCommission;
 
         [JsonProperty("laborCommission")]
-        public int LaborCommission;
+        public double LaborCommission;
 
         [JsonProperty("sentToCarfax")]
         public bool SentToCarfax;
@@ -177,7 +177,7 @@ namespace Torqqe.Functions.Model
         public string Name;
 
         [JsonProperty("authorizedDate")]
-        public DateTime AuthorizedDate;
+        public DateTime? AuthorizedDate;
 
         [JsonProperty("id")]
         public string Id;
